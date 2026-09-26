@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ataccama/main/json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json",
+  "title": "PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm",
+  "type": "object",
+  "properties": {
+    "manualRuleInstances": {
+      "type": "object",
+      "properties": {
+        "new_email-rule": {
+          "type": "object",
+          "properties": {
+            "ruleUrn": {
+              "type": "string"
+            },
+            "ruleInstanceName": {
+              "type": "string"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "mappings": {
+              "type": "object",
+              "properties": {
+                "new_email-mapping": {
+                  "type": "object",
+                  "properties": {
+                    "catalogItemAttributeUrn": {
+                      "type": "string"
+                    },
+                    "ruleAttributeUrn": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "dqThresholds": {
+              "type": "object",
+              "properties": {
+                "new_email-threshold": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "overallDqThresholds": {
+      "type": "object",
+      "properties": {
+        "new_overall-threshold": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

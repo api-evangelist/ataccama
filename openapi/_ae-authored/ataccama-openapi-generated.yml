@@ -1,0 +1,1472 @@
+openapi: 3.1.0
+info:
+  title: Ataccama API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 32 operation(s) read from 18 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Ataccama has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 73
+    documentation: -41
+    pages-with-code: 16
+    pages-read: 18
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  - https://community.ataccama.com/master-data-management-reference-data-management-92
+  - https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/api-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/urn-reference.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/folders-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/term-assignments-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/sources-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/stewardship-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/documentation-flow-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/generic-metadata-entities-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/metadata-model-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/run-dq-evaluation-from-pipelines.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/retrieve-dq-results-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+servers:
+- url: https://<keycloak
+paths:
+  /:
+    post:
+      operationId: post
+      tags:
+      - Api
+      summary: POST /
+      x-source: https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST  --url \"https://<keycloak>/realms/ataccamaone/protocol/openid-connect/token\"  --data \"grant_type=client_credentials\"\
+          \  --data \"client_id=<keycloak_client_with_service_account>\"  --data \"client_secret=<client_secret>\" \n Example response \n {\n\
+          \ \"access_token\":\"<access token>\",\n \"expires_in\":\"<expiry of the token in seconds>\",\n \"refresh_expires_in\":\"<expiry of\
+          \ the refresh token in se"
+  /api/catalog/v1/attributes/term-assignments/batch/{batchid}:
+    post:
+      operationId: post_api_catalog_v1_attributes_term_assignments_batch_batchid
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/attributes/term-assignments/batch/assign
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/term-assignments-api.html
+      parameters:
+      - name: batchid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/attributes/term-assignments/batch/assign\"  -H \"Authorization:\
+          \ Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"data\": [\n {\n \"id\": \"item-1\",\n \"attributeUrn\":\
+          \ \"urn:ata:{your-tenant}:catalog:catalog-attribute:123e4567-e89b-12d3-a456-426614174000\",\n \"termUrns\": [\n \"urn:ata:{your-tenant}:catalog:term:3fa85f64-5717-"
+        collapsed_from: 2 example path(s) differing only at batchId
+  /api/catalog/v1/attributes/term-assignments/denylist/batch/{batchid}:
+    post:
+      operationId: post_api_catalog_v1_attributes_term_assignments_denylist_batch_batchid
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/attributes/term-assignments/denylist/batch/add
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/term-assignments-api.html
+      parameters:
+      - name: batchid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/attributes/term-assignments/denylist/batch/add\"  -H \"\
+          Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"data\": [\n {\n \"id\": \"item-1\",\n \"attributeUrn\"\
+          : \"urn:ata:{your-tenant}:catalog:catalog-attribute:123e4567-e89b-12d3-a456-426614174000\",\n \"termUrns\": [\n \"urn:ata:{your-tenant}:catalog:term:7c9e6679"
+        collapsed_from: 2 example path(s) differing only at batchId
+  /api/catalog/v1/catalog-items/filter:
+    post:
+      operationId: post_api_catalog_v1_catalog_items_filter
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/catalog-items/filter
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1CatalogItemsFilterRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/catalog-items/filter\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"filter\": {\n \"name\": {\n \"contains\": \"customer\"\n }\n }\n }' \n Query parameters\
+          \ \n Parameter \n Type \n Required \n Description \n after \n string \n No \n Cursor for forward pagination. \n size \n integer \n No\
+          \ \n Number of catalog item"
+  /api/catalog/v1/documentation-flow/configurations:
+    get:
+      operationId: get_api_catalog_v1_documentation_flow_configurations
+      tags:
+      - Api
+      summary: GET /api/catalog/v1/documentation-flow/configurations
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/documentation-flow-api.html
+      parameters:
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiCatalogV1DocumentationFlowConfigurationsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/catalog/v1/documentation-flow/configurations?size=20\"  -H \"Authorization:\
+          \ Bearer {access_token}\" \n Query parameters \n Parameter \n Type \n Required \n Description \n after \n string \n No \n Cursor for\
+          \ forward pagination. \n size \n integer \n No \n Number of configurations to return. \n Default: 20 . \n Max: 100 . \n Response example\
+          \ \n {\n \"meta\": {\n \"nex"
+  /api/catalog/v1/documentation-flow/start:
+    post:
+      operationId: post_api_catalog_v1_documentation_flow_start
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/documentation-flow/start
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/documentation-flow-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1DocumentationFlowStartRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1DocumentationFlowStartResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/documentation-flow/start\"  -H \"Authorization: Bearer\
+          \ {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"configurationUrn\": \"urn:ata:{your-tenant}:catalog:documentation-flow-configuration:123e4567-e89b-12d3-a456-426614174000\"\
+          ,\n \"connectionUrn\": \"urn:ata:{your-tenant}:processing:connection:b812d964-f94e-4be7-85c3-0073742"
+  /api/catalog/v1/entities/batch/{batchid}:
+    post:
+      operationId: post_api_catalog_v1_entities_batch_batchid
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/entities/batch/create
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/generic-metadata-entities-api.html
+      parameters:
+      - name: batchid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1EntitiesBatchBatchidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1EntitiesBatchBatchidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/entities/batch/create\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"data\": [\n {\n \"id\": \"item-1\",\n \"concreteType\": \"businessTerm\",\n \"parentProperty\"\
+          : \"terms\",\n \"properties\": {\n \"name\": \"PII\",\n \"abbreviation\": \"PII\"\n }\n },\n {\n \"id\": \"item-2\",\n \"concreteType\"\
+          : \"businessTerm\",\n \"parentPrope"
+        collapsed_from: 3 example path(s) differing only at batchId
+  /api/catalog/v1/metadata-model/entities:
+    get:
+      operationId: get_api_catalog_v1_metadata_model_entities
+      tags:
+      - Api
+      summary: GET /api/catalog/v1/metadata-model/entities
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/metadata-model-api.html
+      parameters:
+      - name: searchQuery
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiCatalogV1MetadataModelEntitiesResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/catalog/v1/metadata-model/entities?searchQuery=term&size=20\"  -H\
+          \ \"Authorization: Bearer {access_token}\" \n Query parameters \n Parameter \n Type \n Required \n Description \n after \n string \n\
+          \ No \n Cursor for forward pagination.\nWhen omitted, the list starts at the beginning. \n size \n integer \n No \n Number of entity\
+          \ definitions to return. \n Default"
+  /api/catalog/v1/metadata-model/entities/businessTerm:
+    get:
+      operationId: get_api_catalog_v1_metadata_model_entities_businessTerm
+      tags:
+      - Api
+      summary: GET /api/catalog/v1/metadata-model/entities/businessTerm
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/metadata-model-api.html
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/catalog/v1/metadata-model/entities/businessTerm\"  -H \"Authorization:\
+          \ Bearer {access_token}\" \n Path parameters \n Parameter \n Type \n Required \n Description \n name \n string \n Yes \n The entity-type\
+          \ identifier, matching the name field of the entity definition.\nFor example: term , businessTerm , catalogItem . \n Response example\
+          \ \n {\n \"name\": \"busin"
+  /api/catalog/v1/stewardship/batch/manage:
+    post:
+      operationId: post_api_catalog_v1_stewardship_batch_manage
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/stewardship/batch/manage
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/stewardship-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1StewardshipBatchManageRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1StewardshipBatchManageResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/stewardship/batch/manage\"  -H \"Authorization: Bearer\
+          \ {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"data\": [\n {\n \"id\": \"item-1\",\n \"entityUrn\": \"urn:ata:{your-tenant}:catalog:catalog-item:fde84300-7a83-4d24-8c88-30ada80b0b54\"\
+          ,\n \"groupUrn\": \"urn:ata:{your-tenant}:iam:group:7c9e6679-7425-40de-944b-e07fc1f90ae7\",\n \"pre"
+  /api/catalog/v1/stewardship/manage:
+    post:
+      operationId: post_api_catalog_v1_stewardship_manage
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/stewardship/manage
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/stewardship-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1StewardshipManageRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1StewardshipManageResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/stewardship/manage\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"entityUrn\": \"urn:ata:{your-tenant}:catalog:catalog-item:fde84300-7a83-4d24-8c88-30ada80b0b54\"\
+          ,\n \"groupUrn\": \"urn:ata:{your-tenant}:iam:group:7c9e6679-7425-40de-944b-e07fc1f90ae7\",\n \"previousStewardAccessLevel\": \"viewMetada"
+  /api/catalog/v1/{v1id}:
+    get:
+      operationId: get_api_catalog_v1_v1id
+      tags:
+      - Api
+      summary: GET /api/catalog/v1/attributes
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiCatalogV1V1IdResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/catalog/v1/attributes?size=20\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n Query parameters \n Parameter \n Type \n Required \n Description \n after \n string \n No \n Cursor for forward pagination. \n\
+          \ size \n integer \n No \n Number of catalog item attributes to return. \n Default: 20 . \n Max: 100 . \n catalogItemUrn \n string \n\
+          \ No \n Filter attributes by"
+        collapsed_from: 5 example path(s) differing only at v1Id
+    post:
+      operationId: post_api_catalog_v1_v1id
+      tags:
+      - Api
+      summary: POST /api/catalog/v1/catalog-items
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCatalogV1V1IdRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiCatalogV1V1IdResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/catalog/v1/catalog-items\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"type\": \"dslQueryCatalogItem\",\n \"name\": \"high_value_customers\",\n \"description\"\
+          : \"Customers with a lifetime value over 10k\",\n \"connectionUrn\": \"urn:ata:{your-tenant}:processing:connection:b812d964-f94e-4be7-85c3-0073742ade09\"\
+          ,\n \""
+        collapsed_from: 4 example path(s) differing only at v1Id
+  /api/catalog/v1/{v1id}/{urn}:
+    delete:
+      operationId: delete_api_catalog_v1_v1id_urn
+      tags:
+      - Api
+      summary: DELETE /api/catalog/v1/catalog-items/{urn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: urn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiCatalogV1V1IdUrnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE \"https://{your-environment}.ataccama.one/api/catalog/v1/catalog-items/{urn}\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n The response returns the HTTP status code 204 No Content on success. \n Complete example \n Here’s a complete example using cURL\
+          \ to work with catalog items: "
+        collapsed_from: 4 example path(s) differing only at v1Id
+    get:
+      operationId: get_api_catalog_v1_v1id_urn
+      tags:
+      - Api
+      summary: GET /api/catalog/v1/attributes/{urn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: urn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: properties
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiCatalogV1V1IdUrnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/catalog/v1/attributes/{urn}\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n Path parameters \n Parameter \n Type \n Required \n Description \n urn \n string \n Yes \n URN identifier of the catalog item attribute.\n\
+          For example: urn:ata:{your-tenant}:catalog:catalog-attribute:123e4567-e89b-12d3-a456-426614174000 . \n Query parameters \n Parameter\
+          \ \n Type \n "
+        collapsed_from: 5 example path(s) differing only at v1Id
+    patch:
+      operationId: patch_api_catalog_v1_v1id_urn
+      tags:
+      - Api
+      summary: PATCH /api/catalog/v1/attributes/{urn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: urn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiCatalogV1V1IdUrnRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiCatalogV1V1IdUrnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH \"https://{your-environment}.ataccama.one/api/catalog/v1/attributes/{urn}\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"description\": \"Primary email address of the customer\",\n \"extraProperties\"\
+          : {\n \"isPii\": true,\n \"sensitivity\": \"HIGH\"\n }\n }' \n Request body fields \n Field \n Type \n Required \n Description \n description\
+          \ \n string or null \n No \n "
+        collapsed_from: 5 example path(s) differing only at v1Id
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors:
+    post:
+      operationId: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors\"  -H\
+          \ \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\"name\": \"Customer Data Monitor\"}' \n The\
+          \ response returns the created monitor, including its URN.\nSave it for the following steps. \n For the full request body options and\
+          \ details, see Create a moni"
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}:
+    patch:
+      operationId: patch_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors_dqmonitorurn
+      tags:
+      - Api
+      summary: PATCH /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dqmonitorurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors/{dqMonitorUrn}\"\
+          \  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"manualRuleInstances\": {\n \"new_email-rule\"\
+          : {\n \"ruleUrn\": \"urn:ata:{your-tenant}:data-quality:rule:...\",\n \"ruleInstanceName\": \"Email Format Valid\",\n \"enabled\": true,\n\
+          \ \"mappings\":"
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}/{id}:
+    post:
+      operationId: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors_dqmonitorurn_i
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}/processings
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dqmonitorurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors/{dqMonitorUrn}/processings\"\
+          \  -H \"Authorization: Bearer {access_token}\" \n Response: Links for polling and for the results \n {\n \"polling\": {\n \"href\":\
+          \ \"https://{your-environment}.ataccama.one/api/processing/v1/workflows/urn:ata:{your-tenant}:processing:workflow:...\"\n },\n \"result\"\
+          : {\n \""
+        collapsed_from: 2 example path(s) differing only at id
+  /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish:
+    post:
+      operationId: post_api_data_quality_v1_dq_dashboards_dqdashboardurn_publish
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: dqdashboardurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dashboards/{dqDashboardUrn}/publish\"  -H \"Authorization:\
+          \ Bearer {access_token}\" \n The API does not return the aggregated quality.\nTo view it, open the dashboard in the web application\
+          \ . \n For details, see Create a dashboard and Publish a dashboard . \n Import rules from an external source \n To migrate rule definitions\
+          \ main"
+  /api/data-quality/v1/results/dq-evaluation/bulk:
+    post:
+      operationId: post_api_data_quality_v1_results_dq_evaluation_bulk
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/results/dq-evaluation/bulk
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/retrieve-dq-results-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/results/dq-evaluation/bulk\"  -H \"Authorization:\
+          \ Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"filter\": [\n {\n \"catalogItemUrn\": \"urn:ata:{your-tenant}:catalog:catalog-item:123e4567-...\"\
+          ,\n \"dqMonitorUrn\": \"urn:ata:{your-tenant}:data-quality:dq-monitor:456e4567-...\"\n },\n {\n \"catalogItemUrn\": \"urn:ata:{you"
+  /api/data-quality/v1/rules/{ruleurn}/publish:
+    get:
+      operationId: get_api_data_quality_v1_rules_ruleurn_publish
+      tags:
+      - Api
+      summary: Publish a rule
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_data_quality_v1_rules_ruleurn_publish
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/rules/{ruleurn}/publish
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}/publish\"  -H \"Authorization: Bearer\
+          \ {access_token}\" \n Publishing requires the rule to be complete (including a name , an implementation with conditions, and at least\
+          \ one input group with joined: false ).\nAn incomplete rule fails with a 400 error listing what is missing.\nFor details, see Publish\
+          \ a rule . \n Ste"
+  /api/data-quality/v1/rules/{ruleurn}:
+    delete:
+      operationId: delete_api_data_quality_v1_rules_ruleurn
+      tags:
+      - Api
+      summary: DELETE /api/data-quality/v1/rules/{ruleurn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiDataQualityV1RulesRuleurnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n A successful request returns 204 No Content . \n Create rules in batch \n Create up to 100 rules in a single request.\nEach item\
+          \ requires name , inputGroups , and implementation .\nStore each sub-entity under a temporary key that you choose, such as new_email\
+          \ (see H"
+    patch:
+      operationId: patch_api_data_quality_v1_rules_ruleurn
+      tags:
+      - Api
+      summary: PATCH /api/data-quality/v1/rules/{ruleurn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiDataQualityV1RulesRuleurnRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiDataQualityV1RulesRuleurnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"description\": \"Checks that the value is a syntactically valid email address (RFC\
+          \ 5322).\",\n \"inputGroups\": {\n \"{inputGroupId}\": {\n \"inputs\": {\n \"{inputId}\": { \"name\": \"email_address\" },\n \"{obsoleteInputId}\"\
+          : null,\n \"new_"
+  /api/data-quality/v1/{v1id}:
+    get:
+      operationId: get_api_data_quality_v1_v1id
+      tags:
+      - Api
+      summary: GET /api/data-quality/v1/dq-dimensions
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dimensions\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n The endpoint returns published dimensions only, with the same forward-only pagination as List rules . \n In the response, each\
+          \ dimension carries: \n urn : The dimension’s URN, referenced as dqDimensionUrn in rule implementations. \n results : All dimension\
+          \ results of th"
+        collapsed_from: 4 example path(s) differing only at v1Id
+    post:
+      operationId: post_api_data_quality_v1_v1id
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/dq-dashboards
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1V1IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dashboards\"  -H \"Authorization: Bearer {access_token}\"\
+          \  -H \"Content-Type: application/json\"  -d '{\n \"name\": \"Customer Data Dashboard\",\n \"dqMonitorUrns\": [\n \"{dqMonitorUrn}\"\
+          \n ]\n }' \n The response returns the created dashboard draft, including its URN.\nSave it for publishing the dashboard. \n Publish\
+          \ the dashboard: \n Request"
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /api/data-quality/v1/{v1id}/batch/create:
+    post:
+      operationId: post_api_data_quality_v1_v1id_batch_create
+      tags:
+      - Api
+      summary: POST /api/data-quality/v1/dq-monitors/batch/create
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1V1IdBatchCreateResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{target-environment}.ataccama.one/api/data-quality/v1/dq-monitors/batch/create\"  -H \"Authorization:\
+          \ Bearer {target_access_token}\"  -H \"Content-Type: application/json\"  -d @monitors.json \n Response: 207 Multi-Status, one monitor\
+          \ created and one failed \n {\n \"meta\": { \"total\": 2, \"success\": 1, \"fail\": 1 },\n \"results\": [\n {\n \"status\": \"OK\",\n\
+          \ \"data\": {\n \"urn\": \"urn:ata:{target-ten"
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /api/reference-data/v1/tables:
+    get:
+      operationId: get_api_reference_data_v1_tables
+      tags:
+      - Api
+      summary: GET /api/reference-data/v1/tables
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/api-authentication.html
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/reference-data/v1/tables\"  -H \"Authorization: Bearer {access_token}\"\
+          \ \n Token expiration and renewal \n Access tokens expire after the time specified in the expires_in field.\nWhen a token expires, you\
+          \ will receive a 401 Unauthorized response. \n To continue making API requests, obtain a new access token by repeating the token request.\
+          \ \nImplemen"
+  /api/rest/master/{viewname}/{typename}:
+    post:
+      operationId: post_api_rest_master_viewname_typename
+      tags:
+      - Api
+      summary: How to trigger approval workflow when creating a record via REST API?
+      x-source: https://community.ataccama.com/master-data-management-reference-data-management-92
+      parameters:
+      - name: viewname
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: typename
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalog/v1/attributes/term-assignments/batch/assign:
+    post:
+      operationId: post_catalog_v1_attributes_term_assignments_batch_assign
+      tags:
+      - Catalog
+      summary: The REST API is currently in Early Access Preview.
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /data-quality/v1/{v1id}:
+    get:
+      operationId: get_data_quality_v1_v1id
+      tags:
+      - Data Quality
+      summary: List DQ dimensions
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/urn-reference.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+components:
+  schemas:
+    PostResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        expires_in:
+          type: string
+        refresh_expires_in:
+          type: string
+        token_type:
+          type: string
+    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              attributeUrn:
+                type: string
+              termUrns:
+                type: array
+                items:
+                  type: string
+    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              attributeUrn:
+                type: string
+              termUrns:
+                type: array
+                items:
+                  type: string
+    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiCatalogV1CatalogItemsFilterRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+          properties:
+            name:
+              type: object
+              properties:
+                contains:
+                  type: string
+    GetApiCatalogV1DocumentationFlowConfigurationsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            next:
+              type: string
+            total:
+              type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              urn:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              configuration:
+                type: string
+    PostApiCatalogV1DocumentationFlowStartRequest:
+      type: object
+      properties:
+        configurationUrn:
+          type: string
+        connectionUrn:
+          type: string
+    PostApiCatalogV1DocumentationFlowStartResponse:
+      type: object
+      properties:
+        workflowUrn:
+          type: string
+    PostApiCatalogV1EntitiesBatchBatchidRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              concreteType:
+                type: string
+              parentProperty:
+                type: string
+              properties:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  abbreviation:
+                    type: string
+    PostApiCatalogV1EntitiesBatchBatchidResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    GetApiCatalogV1MetadataModelEntitiesResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            next:
+              type: string
+            total:
+              type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              nodePaths:
+                type: array
+                items:
+                  type: string
+              superEntities:
+                type: array
+                items:
+                  type: string
+              subEntities:
+                type: array
+                items: {}
+              properties:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    description:
+                      type: string
+                    type:
+                      type: string
+                    scalarType:
+                      type: string
+                    editable:
+                      type: boolean
+              editable:
+                type: boolean
+    GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        nodePaths:
+          type: array
+          items:
+            type: string
+        superEntities:
+          type: array
+          items:
+            type: string
+        subEntities:
+          type: array
+          items: {}
+        properties:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              type:
+                type: string
+              scalarType:
+                type: string
+              editable:
+                type: boolean
+        editable:
+          type: boolean
+    PostApiCatalogV1StewardshipBatchManageRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              entityUrn:
+                type: string
+              groupUrn:
+                type: string
+              previousStewardAccessLevel:
+                type: string
+    PostApiCatalogV1StewardshipBatchManageResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiCatalogV1StewardshipManageRequest:
+      type: object
+      properties:
+        entityUrn:
+          type: string
+        groupUrn:
+          type: string
+        previousStewardAccessLevel:
+          type: string
+    PostApiCatalogV1StewardshipManageResponse:
+      type: object
+      properties:
+        entityUrn:
+          type: string
+        effectiveStewardship:
+          type: object
+          properties:
+            groupUrn:
+              type: string
+            originUrn:
+              type: string
+    GetApiCatalogV1V1IdResponse:
+      type: object
+      properties:
+        next:
+          type: string
+        total:
+          type: integer
+    PostApiCatalogV1V1IdRequest:
+      type: object
+      properties:
+        type:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        connectionUrn:
+          type: string
+        query:
+          type: string
+        folderUrn:
+          type: string
+    PostApiCatalogV1V1IdResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        connection:
+          type: object
+          properties:
+            urn:
+              type: string
+        folders:
+          type: array
+          items:
+            type: object
+            properties:
+              urn:
+                type: string
+              name:
+                type: string
+        source:
+          type: object
+          properties:
+            urn:
+              type: string
+    DeleteApiCatalogV1V1IdUrnResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    GetApiCatalogV1V1IdUrnResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        name:
+          type: string
+        dataType:
+          type: string
+        columnType:
+          type: string
+        description:
+          type: string
+        catalogItemUrn:
+          type: string
+        termAssignments:
+          type: array
+          items:
+            type: object
+            properties:
+              termUrn:
+                type: string
+              source:
+                type: string
+        termDetectionDenylist:
+          type: array
+          items:
+            type: object
+            properties:
+              termUrn:
+                type: string
+        effectiveCriticality:
+          type: object
+          properties:
+            isCritical:
+              type: boolean
+        extraProperties:
+          type: object
+          properties:
+            isPii:
+              type: boolean
+            sensitivity:
+              type: string
+    PatchApiCatalogV1V1IdUrnRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        extraProperties:
+          type: object
+          properties:
+            isPii:
+              type: boolean
+            sensitivity:
+              type: string
+    PatchApiCatalogV1V1IdUrnResponse:
+      type: object
+      properties:
+        next:
+          type: string
+        total:
+          type: integer
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ:
+      type: object
+      properties:
+        name:
+          type: string
+    PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm:
+      type: object
+      properties:
+        manualRuleInstances:
+          type: object
+          properties:
+            new_email-rule:
+              type: object
+              properties:
+                ruleUrn:
+                  type: string
+                ruleInstanceName:
+                  type: string
+                enabled:
+                  type: boolean
+                mappings:
+                  type: object
+                  properties:
+                    new_email-mapping:
+                      type: object
+                      properties:
+                        catalogItemAttributeUrn:
+                          type: string
+                        ruleAttributeUrn:
+                          type: string
+                dqThresholds:
+                  type: object
+                  properties:
+                    new_email-threshold:
+                      type: object
+                      properties:
+                        value:
+                          type: integer
+        overallDqThresholds:
+          type: object
+          properties:
+            new_overall-threshold:
+              type: object
+              properties:
+                value:
+                  type: integer
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo:
+      type: object
+      properties:
+        polling:
+          type: object
+          properties:
+            href:
+              type: string
+        result:
+          type: object
+          properties:
+            href:
+              type: string
+    PostApiDataQualityV1ResultsDqEvaluationBulkRequest:
+      type: object
+      properties:
+        filter:
+          type: array
+          items:
+            type: object
+            properties:
+              catalogItemUrn:
+                type: string
+              dqMonitorUrn:
+                type: string
+    PostApiDataQualityV1ResultsDqEvaluationBulkResponse:
+      type: object
+      properties:
+        filter:
+          type: array
+          items:
+            type: object
+            properties:
+              catalogItemUrn:
+                type: string
+              dqMonitorUrn:
+                type: string
+    DeleteApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PatchApiDataQualityV1RulesRuleurnRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        inputGroups:
+          type: object
+          properties:
+            '{inputGroupId}':
+              type: object
+              properties:
+                inputs:
+                  type: object
+                  properties:
+                    '{inputId}':
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                    '{obsoleteInputId}':
+                      type:
+                      - string
+                      - 'null'
+                    new_currency:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        dataType:
+                          type: string
+    PatchApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        draftType:
+          type: string
+        name:
+          type: string
+        inputGroups:
+          type: object
+        implementation:
+          type: object
+    PostApiDataQualityV1V1IdRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        dqMonitorUrns:
+          type: array
+          items:
+            type: string
+    PostApiDataQualityV1V1IdBatchCreateResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Catalog
+- name: Data Quality

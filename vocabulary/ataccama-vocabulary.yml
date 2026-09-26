@@ -1,0 +1,181 @@
+generated: '2026-09-26'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/ataccama-openapi-generated.yml
+vocabulary:
+  name: Ataccama Domain Vocabulary
+  description: 'Terms declared by Ataccama''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-26'
+  terms:
+  - term: PostResponse
+    definition: 'Object declared by the contract with fields: access_token, expires_in, refresh_expires_in, token_type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostResponse
+  - term: PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest
+  - term: PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons
+  - term: PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi
+  - term: PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2
+  - term: PostApiCatalogV1CatalogItemsFilterRequest
+    definition: 'Object declared by the contract with fields: filter.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1CatalogItemsFilterRequest
+  - term: GetApiCatalogV1DocumentationFlowConfigurationsResponse
+    definition: 'Object declared by the contract with fields: meta, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1DocumentationFlowConfigurationsResponse
+  - term: PostApiCatalogV1DocumentationFlowStartRequest
+    definition: 'Object declared by the contract with fields: configurationUrn, connectionUrn.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1DocumentationFlowStartRequest
+  - term: PostApiCatalogV1DocumentationFlowStartResponse
+    definition: 'Object declared by the contract with fields: workflowUrn.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1DocumentationFlowStartResponse
+  - term: PostApiCatalogV1EntitiesBatchBatchidRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1EntitiesBatchBatchidRequest
+  - term: PostApiCatalogV1EntitiesBatchBatchidResponse
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1EntitiesBatchBatchidResponse
+  - term: GetApiCatalogV1MetadataModelEntitiesResponse
+    definition: 'Object declared by the contract with fields: meta, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1MetadataModelEntitiesResponse
+  - term: GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse
+    definition: 'Object declared by the contract with fields: name, description, nodePaths, superEntities, subEntities, properties, editable.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse
+  - term: PostApiCatalogV1StewardshipBatchManageRequest
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1StewardshipBatchManageRequest
+  - term: PostApiCatalogV1StewardshipBatchManageResponse
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1StewardshipBatchManageResponse
+  - term: PostApiCatalogV1StewardshipManageRequest
+    definition: 'Object declared by the contract with fields: entityUrn, groupUrn, previousStewardAccessLevel.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1StewardshipManageRequest
+  - term: PostApiCatalogV1StewardshipManageResponse
+    definition: 'Object declared by the contract with fields: entityUrn, effectiveStewardship.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1StewardshipManageResponse
+  - term: GetApiCatalogV1V1IdResponse
+    definition: 'Object declared by the contract with fields: next, total.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1V1IdResponse
+  - term: PostApiCatalogV1V1IdRequest
+    definition: 'Object declared by the contract with fields: type, name, description, connectionUrn, query, folderUrn.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1V1IdRequest
+  - term: PostApiCatalogV1V1IdResponse
+    definition: 'Object declared by the contract with fields: urn, name, description, connection, folders, source.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiCatalogV1V1IdResponse
+  - term: DeleteApiCatalogV1V1IdUrnResponse
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/DeleteApiCatalogV1V1IdUrnResponse
+  - term: GetApiCatalogV1V1IdUrnResponse
+    definition: 'Object declared by the contract with fields: urn, name, dataType, columnType, description, catalogItemUrn, termAssignments, termDetectionDenylist,
+      effectiveCriticality, extraProperties.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1V1IdUrnResponse
+  - term: PatchApiCatalogV1V1IdUrnRequest
+    definition: 'Object declared by the contract with fields: description, extraProperties.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiCatalogV1V1IdUrnRequest
+  - term: PatchApiCatalogV1V1IdUrnResponse
+    definition: 'Object declared by the contract with fields: next, total.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiCatalogV1V1IdUrnResponse
+  - term: PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ
+    definition: 'Object declared by the contract with fields: name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ
+  - term: PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm
+    definition: 'Object declared by the contract with fields: manualRuleInstances, overallDqThresholds.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm
+  - term: PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo
+    definition: 'Object declared by the contract with fields: polling, result.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo
+  - term: PostApiDataQualityV1ResultsDqEvaluationBulkRequest
+    definition: 'Object declared by the contract with fields: filter.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkRequest
+  - term: PostApiDataQualityV1ResultsDqEvaluationBulkResponse
+    definition: 'Object declared by the contract with fields: filter.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkResponse
+  - term: DeleteApiDataQualityV1RulesRuleurnResponse
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/DeleteApiDataQualityV1RulesRuleurnResponse
+  - term: PatchApiDataQualityV1RulesRuleurnRequest
+    definition: 'Object declared by the contract with fields: description, inputGroups.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiDataQualityV1RulesRuleurnRequest
+  - term: PatchApiDataQualityV1RulesRuleurnResponse
+    definition: 'Object declared by the contract with fields: urn, draftType, name, inputGroups, implementation.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PatchApiDataQualityV1RulesRuleurnResponse
+  - term: PostApiDataQualityV1V1IdRequest
+    definition: 'Object declared by the contract with fields: name, dqMonitorUrns.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1V1IdRequest
+  - term: PostApiDataQualityV1V1IdBatchCreateResponse
+    definition: 'Object declared by the contract with fields: total, success, fail.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/PostApiDataQualityV1V1IdBatchCreateResponse

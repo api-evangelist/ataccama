@@ -1,0 +1,18 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+sources:
+- https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+- https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-quality.html
+- https://docs.ataccama.com/one/latest/getting-started/get-started-with-catalog-and-glossary.html
+- https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-observability.html
+description: Authentication for Ataccama ONE APIs
+schemes:
+- type: oauth2
+  name: Keycloak
+  evidence: The only supported provider of access tokens for ONE is Keycloak.
+  flows:
+  - client_credentials
+  how_to_obtain: Obtain an access token from Keycloak using a service account client with either Client ID and Secret or JSON Web authentication.
+docs: https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html

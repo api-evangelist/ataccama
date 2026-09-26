@@ -1,0 +1,170 @@
+generated: '2026-09-26'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/ataccama-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.ataccama.com, www.ataccama.com, academy.ataccama.com, cdn.ataccama.com;
+  verdict opaque (https://cdn.ataccama.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 31 operation(s) in the provider''s own OpenAPI (31 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: post
+  operationId: post
+  method: POST
+  path: /
+  description: POST /
+- name: post_api_catalog_v1_attributes_term_assignments_batch_batchi
+  operationId: post_api_catalog_v1_attributes_term_assignments_batch_batchid
+  method: POST
+  path: /api/catalog/v1/attributes/term-assignments/batch/{batchid}
+  description: POST /api/catalog/v1/attributes/term-assignments/batch/assign
+- name: post_api_catalog_v1_attributes_term_assignments_denylist_bat
+  operationId: post_api_catalog_v1_attributes_term_assignments_denylist_batch_batchid
+  method: POST
+  path: /api/catalog/v1/attributes/term-assignments/denylist/batch/{batchid}
+  description: POST /api/catalog/v1/attributes/term-assignments/denylist/batch/add
+- name: post_api_catalog_v1_catalog_items_filter
+  operationId: post_api_catalog_v1_catalog_items_filter
+  method: POST
+  path: /api/catalog/v1/catalog-items/filter
+  description: POST /api/catalog/v1/catalog-items/filter
+- name: get_api_catalog_v1_documentation_flow_configurations
+  operationId: get_api_catalog_v1_documentation_flow_configurations
+  method: GET
+  path: /api/catalog/v1/documentation-flow/configurations
+  description: GET /api/catalog/v1/documentation-flow/configurations
+- name: post_api_catalog_v1_documentation_flow_start
+  operationId: post_api_catalog_v1_documentation_flow_start
+  method: POST
+  path: /api/catalog/v1/documentation-flow/start
+  description: POST /api/catalog/v1/documentation-flow/start
+- name: post_api_catalog_v1_entities_batch_batchid
+  operationId: post_api_catalog_v1_entities_batch_batchid
+  method: POST
+  path: /api/catalog/v1/entities/batch/{batchid}
+  description: POST /api/catalog/v1/entities/batch/create
+- name: get_api_catalog_v1_metadata_model_entities
+  operationId: get_api_catalog_v1_metadata_model_entities
+  method: GET
+  path: /api/catalog/v1/metadata-model/entities
+  description: GET /api/catalog/v1/metadata-model/entities
+- name: get_api_catalog_v1_metadata_model_entities_business_term
+  operationId: get_api_catalog_v1_metadata_model_entities_businessTerm
+  method: GET
+  path: /api/catalog/v1/metadata-model/entities/businessTerm
+  description: GET /api/catalog/v1/metadata-model/entities/businessTerm
+- name: post_api_catalog_v1_stewardship_batch_manage
+  operationId: post_api_catalog_v1_stewardship_batch_manage
+  method: POST
+  path: /api/catalog/v1/stewardship/batch/manage
+  description: POST /api/catalog/v1/stewardship/batch/manage
+- name: post_api_catalog_v1_stewardship_manage
+  operationId: post_api_catalog_v1_stewardship_manage
+  method: POST
+  path: /api/catalog/v1/stewardship/manage
+  description: POST /api/catalog/v1/stewardship/manage
+- name: get_api_catalog_v1_v1id
+  operationId: get_api_catalog_v1_v1id
+  method: GET
+  path: /api/catalog/v1/{v1id}
+  description: GET /api/catalog/v1/attributes
+- name: post_api_catalog_v1_v1id
+  operationId: post_api_catalog_v1_v1id
+  method: POST
+  path: /api/catalog/v1/{v1id}
+  description: POST /api/catalog/v1/catalog-items
+- name: delete_api_catalog_v1_v1id_urn
+  operationId: delete_api_catalog_v1_v1id_urn
+  method: DELETE
+  path: /api/catalog/v1/{v1id}/{urn}
+  description: DELETE /api/catalog/v1/catalog-items/{urn}
+- name: get_api_catalog_v1_v1id_urn
+  operationId: get_api_catalog_v1_v1id_urn
+  method: GET
+  path: /api/catalog/v1/{v1id}/{urn}
+  description: GET /api/catalog/v1/attributes/{urn}
+- name: patch_api_catalog_v1_v1id_urn
+  operationId: patch_api_catalog_v1_v1id_urn
+  method: PATCH
+  path: /api/catalog/v1/{v1id}/{urn}
+  description: PATCH /api/catalog/v1/attributes/{urn}
+- name: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_mon
+  operationId: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors
+  method: POST
+  path: /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors
+  description: POST /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors
+- name: patch_api_data_quality_v1_catalog_items_catalogitemurn_dq_mo
+  operationId: patch_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors_dqmonitorurn
+  method: PATCH
+  path: /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}
+  description: PATCH /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}
+- name: post_api_data_quality_v1_dq_dashboards_dqdashboardurn_publis
+  operationId: post_api_data_quality_v1_dq_dashboards_dqdashboardurn_publish
+  method: POST
+  path: /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish
+  description: POST /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish
+- name: post_api_data_quality_v1_results_dq_evaluation_bulk
+  operationId: post_api_data_quality_v1_results_dq_evaluation_bulk
+  method: POST
+  path: /api/data-quality/v1/results/dq-evaluation/bulk
+  description: POST /api/data-quality/v1/results/dq-evaluation/bulk
+- name: get_api_data_quality_v1_rules_ruleurn_publish
+  operationId: get_api_data_quality_v1_rules_ruleurn_publish
+  method: GET
+  path: /api/data-quality/v1/rules/{ruleurn}/publish
+  description: Publish a rule
+- name: post_api_data_quality_v1_rules_ruleurn_publish
+  operationId: post_api_data_quality_v1_rules_ruleurn_publish
+  method: POST
+  path: /api/data-quality/v1/rules/{ruleurn}/publish
+  description: POST /api/data-quality/v1/rules/{ruleurn}/publish
+- name: delete_api_data_quality_v1_rules_ruleurn
+  operationId: delete_api_data_quality_v1_rules_ruleurn
+  method: DELETE
+  path: /api/data-quality/v1/rules/{ruleurn}
+  description: DELETE /api/data-quality/v1/rules/{ruleurn}
+- name: patch_api_data_quality_v1_rules_ruleurn
+  operationId: patch_api_data_quality_v1_rules_ruleurn
+  method: PATCH
+  path: /api/data-quality/v1/rules/{ruleurn}
+  description: PATCH /api/data-quality/v1/rules/{ruleurn}
+- name: get_api_data_quality_v1_v1id
+  operationId: get_api_data_quality_v1_v1id
+  method: GET
+  path: /api/data-quality/v1/{v1id}
+  description: GET /api/data-quality/v1/dq-dimensions
+- name: post_api_data_quality_v1_v1id
+  operationId: post_api_data_quality_v1_v1id
+  method: POST
+  path: /api/data-quality/v1/{v1id}
+  description: POST /api/data-quality/v1/dq-dashboards
+- name: post_api_data_quality_v1_v1id_batch_create
+  operationId: post_api_data_quality_v1_v1id_batch_create
+  method: POST
+  path: /api/data-quality/v1/{v1id}/batch/create
+  description: POST /api/data-quality/v1/dq-monitors/batch/create
+- name: get_api_reference_data_v1_tables
+  operationId: get_api_reference_data_v1_tables
+  method: GET
+  path: /api/reference-data/v1/tables
+  description: GET /api/reference-data/v1/tables
+- name: post_api_rest_master_viewname_typename
+  operationId: post_api_rest_master_viewname_typename
+  method: POST
+  path: /api/rest/master/{viewname}/{typename}
+  description: How to trigger approval workflow when creating a record via REST API?
+- name: post_catalog_v1_attributes_term_assignments_batch_assign
+  operationId: post_catalog_v1_attributes_term_assignments_batch_assign
+  method: POST
+  path: /catalog/v1/attributes/term-assignments/batch/assign
+  description: The REST API is currently in Early Access Preview.
+- name: get_data_quality_v1_v1id
+  operationId: get_data_quality_v1_v1id
+  method: GET
+  path: /data-quality/v1/{v1id}
+  description: List DQ dimensions

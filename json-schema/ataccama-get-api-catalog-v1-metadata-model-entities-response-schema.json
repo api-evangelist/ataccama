@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ataccama/main/json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json",
+  "title": "GetApiCatalogV1MetadataModelEntitiesResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1MetadataModelEntitiesResponse",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "next": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "nodePaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "superEntities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subEntities": {
+            "type": "array",
+            "items": {}
+          },
+          "properties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "scalarType": {
+                  "type": "string"
+                },
+                "editable": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "editable": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

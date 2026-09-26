@@ -1,0 +1,29 @@
+ █████╗ ████████╗ █████╗  ██████╗ ██████╗ █████╗ ███╗   ███╗ █████╗
+██╔══██╗╚══██╔══╝██╔══██╗██╔════╝██╔════╝██╔══██╗████╗ ████║██╔══██╗
+███████║   ██║   ███████║██║     ██║     ███████║██╔████╔██║███████║
+██╔══██║   ██║   ██╔══██║██║     ██║     ██╔══██║██║╚██╔╝██║██╔══██║
+██║  ██║   ██║   ██║  ██║╚██████╗╚██████╗██║  ██║██║ ╚═╝ ██║██║  ██║
+╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═
+
+
+███████╗███████╗ ██████╗██╗   ██╗██████╗ ██╗████████╗██╗   ██╗████████╗██╗  ██╗████████╗
+██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚══██╔══╝╚██╗██╔╝╚══██╔══╝
+███████╗█████╗  ██║     ██║   ██║██████╔╝██║   ██║    ╚████╔╝    ██║    ╚███╔╝    ██║
+╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║     ╚██╔╝     ██║    ██╔██╗    ██║
+███████║███████╗╚██████╗╚██████╔╝██║  ██║██║   ██║      ██║██╗   ██║   ██╔╝ ██╗   ██║
+╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝
+
+# Security.txt for ataccama.com
+
+# Contact information for security researchers
+Contact: mailto:security@ataccama.com
+
+# Preferred disclosure policy
+Preferred-Languages: en
+
+# Disclosure timeline
+# Please describe the finding briefly in an email enclosed above. We will contact you for more details in case we evaluate it as important. Ataccama currently DOES NOT OPERATE A REWARDS PROGRAM for responsible disclosures, however we will honorarily mention you (please give us the name under which you wish to be officially recognized) on our Acknowledgments page if your report will have been successfully implemented. Lead response time for Ataccama team is approximately 10 business days.
+Acknowledgments: https://www.ataccama.com/security-acknowledgments
+
+# Hiring information for security professionals
+All open positions are advertised on the Ataccama job portal: https://jobs.ataccama.com

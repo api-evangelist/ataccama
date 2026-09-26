@@ -1,0 +1,5 @@
+# Security.txt for jobs.ataccama.com
+Contact: mailto:security@ataccama.com
+Preferred-Languages: en
+Acknowledgments: https://www.ataccama.com/security-acknowledgments
+Expires: 2027-09-01T00:00:00.000Z

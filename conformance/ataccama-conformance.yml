@@ -1,0 +1,28 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.ataccama.com/one/latest/generative-ai/ai-governance-and-security.html
+sources:
+- https://docs.ataccama.com/one/latest/generative-ai/ai-governance-and-security.html
+standards:
+- id: gdpr
+  conforms: true
+  evidence: We comply with applicable data protection regulations, including GDPR, and require all third‑party AI service providers (such as Azure
+    OpenAI) to uphold similar compliance standards.
+- id: nist-csf
+  conforms: true
+  evidence: Our AI governance policies are guided by the NIST AI Risk Management Framework, underscoring our dedication to managing AI risks effectively
+    and responsibly.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: bearer (http)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://docs.ataccama.com/one/latest/generative-ai/ai-governance-and-security.html

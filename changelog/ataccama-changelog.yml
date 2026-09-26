@@ -1,0 +1,21 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html
+sources:
+- https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html
+- https://community.ataccama.com/product-updates
+entries:
+- breaking: false
+  highlights:
+  - Asset Promotion via Import and Export ONE DQ&C Automate migration of monitoring projects, DQ rules, transformation plans, and other assets
+    across environments with dependency resolution, environment remapping, and encrypted archives.
+  - Apply Data Slices to Catalog Items ONE DQ&C Filter data across profiling, DQ evaluation, Data Observability checks, and exports by applying
+    data slices directly to catalog items.
+  - Export Profiling Results to Excel ONE DQ&C Download profiling statistics as an Excel file to share with auditors or teams evaluating the platform.
+  - IOMETE Pushdown Processing ONE DQ&C Profile and monitor data quality of large‑scale tables directly in the IOMETE lakehouse using SQL pushdown,
+    without moving data out of IOMETE.
+  date: '2026-02-13'
+current_version: 17.1.0
+note: Only the 17.0.0 release notes are listed on the page; no explicit versioning scheme is described.
+docs: https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html

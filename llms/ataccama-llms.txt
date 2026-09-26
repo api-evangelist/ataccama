@@ -1,0 +1,86 @@
+# Ataccama ONE Documentation
+
+> Technical reference for Ataccama ONE — a unified platform for Data Quality, Data Catalog, Data Observability, Data Lineage, Master Data Management, and Reference Data Management. Current release: v17.0.0. Use `/latest/` paths for the most recent stable version.
+
+Documentation is organized by module. Each module has its own versioned docs under
+docs.ataccama.com. The platform is available as Ataccama Cloud (fully managed SaaS)
+or hybrid deployment (data processed locally, platform in cloud).
+
+Important notes for developers:
+- API authentication uses JWT tokens — see API Requests Authentication before making calls
+- Data Quality rules use the ONE Expressions language — see the Expressions Reference
+- Generative AI features operate exclusively on metadata, never on raw data values
+- Hybrid DPE (Data Processing Engine) runs in the customer's environment; only metadata
+  is sent to the cloud
+
+## Getting Started
+
+- [ONE DQ&C Overview](https://docs.ataccama.com/one/latest/overview.html): Core Data Quality & Catalog module — covers Knowledge Catalog, Business Glossary, Data Quality, Data Observability, and ONE Data.
+- [Get Started with Data Quality](https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-quality.html): Step-by-step guide to profiling data, writing DQ rules, and running evaluations.
+- [Get Started with Catalog and Glossary](https://docs.ataccama.com/one/latest/getting-started/get-started-with-catalog-and-glossary.html): Connect sources, build a data catalog, and manage business terms.
+- [Get Started with Data Observability](https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-observability.html): Set up continuous monitoring for anomalies, freshness, and schema changes.
+- [Get Started with Generative AI](https://docs.ataccama.com/one/latest/getting-started/get-started-with-generative-ai.html): Enable and configure embedded AI features in Ataccama ONE.
+
+## Product Modules
+
+- [Ataccama ONE Agentic](https://docs.ataccama.com/ataccama-one-agentic/latest/overview.html): Agentic AI layer — autonomous data stewardship, rule generation, and anomaly resolution.
+- [ONE DQ&C (Data Quality & Catalog)](https://docs.ataccama.com/one/latest/overview.html): Core module for data quality, catalog, observability, lineage, and ONE Data. Current version: v17.0.0.
+- [ONE MDM](https://docs.ataccama.com/mdm/latest/overview.html): Master Data Management — multidomain mastering, entity matching, and data provisioning.
+- [ONE RDM](https://docs.ataccama.com/rdm/latest/overview.html): Reference Data Management — governed distribution of codes, hierarchies, and controlled vocabularies.
+- [ONE Desktop](https://docs.ataccama.com/one-desktop/latest/overview.html): Desktop client for authoring DQ rules, transformation plans, and local data processing.
+- [ONE Runtime Server](https://docs.ataccama.com/runtime-server/latest/one-runtime-server.html): Runtime server for on-premise and hybrid deployments.
+
+## APIs
+
+- [REST API Overview — ONE Agentic](https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html): Full REST API reference for the Agentic layer.
+- [ONE API](https://docs.ataccama.com/one/latest/one-apis/one-api.html): Core platform API for catalog, DQ, and metadata operations.
+- [Audit API](https://docs.ataccama.com/one/latest/one-apis/audit-api.html): Query the audit log programmatically.
+- [API Requests Authentication](https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html): How to authenticate API calls using JWT tokens.
+
+## Data Quality
+
+- [Data Quality Overview](https://docs.ataccama.com/one/latest/data-quality/data-quality-overview.html): DQ concepts, rule types, dimensions, and evaluation flow.
+- [Rule Types: DQ and Detection](https://docs.ataccama.com/one/latest/data-quality/rules.html): Difference between DQ evaluation rules and detection rules, and when to use each.
+- [Create DQ Evaluation Rule](https://docs.ataccama.com/one/latest/data-quality/create-dq-rule.html): Step-by-step rule creation, including expression syntax and validation components.
+- [ONE Expressions Reference](https://docs.ataccama.com/one/latest/data-quality/one-expressions.html): Full reference for the ONE expression language used in DQ rules.
+- [Monitoring Projects](https://docs.ataccama.com/one/latest/monitoring-projects/monitoring-projects.html): Configure scheduled DQ monitoring runs with alerting and post-processing.
+- [Data Quality Gates](https://docs.ataccama.com/one/latest/dq-gates/data-quality-gates.html): Embed DQ checks directly into data pipelines via Python or Snowflake UDFs/DMFs.
+- [Anomaly Detection](https://docs.ataccama.com/one/latest/anomaly-detection/anomaly-detection-in-catalog-items.html): AI-powered detection of statistical anomalies in monitored data.
+- [Data Observability](https://docs.ataccama.com/one/latest/data-observability/data-observability.html): Continuous pipeline health monitoring — freshness, volume, schema, and anomalies.
+
+## Connectors & Sources
+
+- [Supported Data Sources](https://docs.ataccama.com/one/latest/sources/supported-data-sources.html): Full list of supported connectors — databases, cloud warehouses, object storage, BI tools, and file formats.
+- [Snowflake Connection](https://docs.ataccama.com/one/latest/sources/snowflake-connection.html): Connect to Snowflake, including pushdown processing configuration.
+- [Databricks Integration](https://docs.ataccama.com/one/latest/sources/databricks-overview.html): Connect to Azure Databricks, AWS Databricks, or Databricks JDBC.
+- [BigQuery Connection](https://docs.ataccama.com/one/latest/sources/bigquery-connection.html): Connect to Google BigQuery with optional pushdown processing.
+
+## Lineage
+
+- [Lineage Overview](https://docs.ataccama.com/one/latest/lineage/get-started.html): How lineage scanning works and how to explore data flows.
+- [Supported Lineage Technologies](https://docs.ataccama.com/one/latest/lineage/supported-lineage-technologies.html): Supported platforms including dbt, Snowflake, Databricks, Power BI, Tableau, and more.
+
+## Generative AI
+
+- [Generative AI in ONE](https://docs.ataccama.com/one/latest/generative-ai/generative-ai-in-one.html): Overview of all embedded AI features and how they work.
+- [AI Governance and Security](https://docs.ataccama.com/one/latest/generative-ai/ai-governance-and-security.html): Data handling policy — only metadata is processed by LLMs, never raw data values; explicit user action required.
+
+## Deployment
+
+- [Ataccama Cloud](https://docs.ataccama.com/one/latest/ataccama-cloud/ataccama-cloud.html): Fully managed SaaS — no infrastructure required.
+- [Hybrid Deployment](https://docs.ataccama.com/one/latest/hybrid-deployment/hybrid-deployment.html): Run the Data Processing Engine locally while the platform is cloud-hosted.
+- [Kubernetes-Based Hybrid DPE](https://docs.ataccama.com/one/latest/hybrid-deployment/kubernetes-based-hybrid-dpe-deployment-guide.html): Deploy the DPE on Kubernetes (AKS, EKS, GKE).
+
+## Release Notes & Lifecycle
+
+- [17.0.0 Release Notes](https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html): What's new in the current release.
+- [Ataccama Lifecycle Policy](https://docs.ataccama.com/one/latest/ataccama-lifecycle-policy.html): Version support windows and end-of-life schedule.
+
+## Optional
+
+- [ONE Expressions Examples Handbook](https://docs.ataccama.com/one/latest/data-quality/one-expressions-examples.html): Practical examples of the ONE expression language for common DQ use cases.
+- [Data Stories](https://docs.ataccama.com/one/latest/data-stories/overview.html): Built-in BI tool for creating data visualizations and dashboards from catalog data.
+- [User Access Management](https://docs.ataccama.com/one/latest/user-access-management/introduction.html): Roles, groups, governance roles, access levels, and stewardship configuration.
+- [Metadata Model](https://docs.ataccama.com/one/latest/metadata-model/metadata-model-overview.html): Extend and customize the platform's metadata model with custom entity types and relationships.
+- [Ataccama Data Quality Application for Snowflake](https://docs.ataccama.com/one/latest/third-party-software/ataccama-data-quality-application-for-snowflake.html): Native Snowflake app for running DQ evaluations without data leaving Snowflake.
+- [Supported Third-Party Components](https://docs.ataccama.com/one/latest/supported-third-party-components.html): All supported third-party libraries, drivers, and runtime dependencies.

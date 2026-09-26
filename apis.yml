@@ -1,23 +1,151 @@
 aid: ataccama
+
 name: Ataccama
-description: 'Ataccama is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.ataccama.com/wp-content/uploads/2025/02/OG-Image-Homepage.jpg?v=1786540450
+
+description: Ataccama provides an agentic data trust platform that combines data quality, observability, lineage, governance and master data management.
+  Their solutions help enterprises accelerate business initiatives with trusted, high‑quality data, supporting AI, analytics and compliance across
+  industries such as finance, insurance and manufacturing. The platform includes modules for data quality, catalog, lineage, reference data, and
+  data observability, delivering a unified data trust foundation.
+
 url: https://raw.githubusercontent.com/api-evangelist/ataccama/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Data Quality
+- Data Governance
+- AI
+- Enterprise
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: TermsOfService
+  url: https://community.ataccama.com/site/terms
+- type: Support
+  url: https://support.ataccama.com
+- type: Documentation
+  url: https://docs.ataccama.com/
+- type: Spectral
+  url: rules/ataccama-rules.yml
+- type: JSONLD
+  url: json-ld/ataccama-context.jsonld
+- type: Vocabulary
+  url: vocabulary/ataccama-vocabulary.yml
+- type: DataModel
+  url: data-model/ataccama-data-model.yml
+- type: ChangeLog
+  url: changelog/ataccama-changelog.yml
+- type: Security
+  url: security/ataccama-vulnerability-disclosure.yml
+- type: Authentication
+  url: authentication/ataccama-authentication.yml
+- type: Conformance
+  url: conformance/ataccama-conformance.yml
+- type: LLMsTxt
+  url: llms/ataccama-llms.txt
+- type: SecurityTxt
+  url: well-known/ataccama-security.txt
+- type: SecurityTxt
+  url: well-known/ataccama-jobs-security.txt
+- type: WellKnown
+  url: well-known/ataccama-well-known.yml
+- type: Hosts
+  url: hosts/ataccama-hosts.yml
+- type: TrustCenter
+  url: https://www.ataccama.com/trust-center
+- type: SignUp
+  url: https://www.ataccama.com/contact/sign-up-for-newsletter
+- type: Newsroom
+  url: https://www.ataccama.com/category/news
+- type: ChangeLog
+  url: https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html
+- type: GettingStarted
+  url: https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-quality.html
+- type: APIReference
+  url: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+- type: VulnerabilityDisclosure
+  url: security/ataccama-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/ataccama-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/ataccama_stock/
+  url: https://www.ataccama.com/
+- type: Blog
+  url: https://www.ataccama.com/resources?search=&cat%5B%5D=66
+- type: Pricing
+  url: https://www.ataccama.com/pricing
+- type: PrivacyPolicy
+  url: https://www.ataccama.com/legal/privacy-notice
+  x-coverage:
+    state: unreadable
+    reason: no-machine-readable-spec
+    detail: Documentation pages exist but no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found.
+    evidence:
+    - url: https://docs.ataccama.com
+      status: 200
+    checked: 2026-09-26
+
+apis:
+- aid: ataccama:ataccama-api
+  name: Ataccama API
+  description: 'Ataccama API as documented publicly: 32 operations. Contract generated from the documentation by API Evangelist (2026-09-26);
+    not the provider''s own document.'
+  humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  baseURL: https://<keycloak
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/ataccama-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://cdn.ataccama.com/mcp
+    status: 403
+  - url: https://community.ataccama.com/mcp
+    status: 403
+  - url: https://forgeglobal.com/ataccama_stock/
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 28
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

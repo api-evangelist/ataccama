@@ -1,0 +1,6 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-llms.py
+source: https://docs.ataccama.com/llms.txt
+bytes: 8585
+note: saved verbatim; the provider's own document

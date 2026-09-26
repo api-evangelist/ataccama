@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ataccama/main/json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json",
+  "title": "GetApiCatalogV1V1IdUrnResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/ataccama-openapi-generated.yml#/components/schemas/GetApiCatalogV1V1IdUrnResponse",
+  "type": "object",
+  "properties": {
+    "urn": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dataType": {
+      "type": "string"
+    },
+    "columnType": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "catalogItemUrn": {
+      "type": "string"
+    },
+    "termAssignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "termUrn": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "termDetectionDenylist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "termUrn": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "effectiveCriticality": {
+      "type": "object",
+      "properties": {
+        "isCritical": {
+          "type": "boolean"
+        }
+      }
+    },
+    "extraProperties": {
+      "type": "object",
+      "properties": {
+        "isPii": {
+          "type": "boolean"
+        },
+        "sensitivity": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
