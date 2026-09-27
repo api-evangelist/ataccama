@@ -1,0 +1,70 @@
+openapi: 3.2.0
+info:
+  title: Ataccama Rest API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 32 operation(s) read from 18 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Ataccama has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 73
+    documentation: -41
+    pages-with-code: 16
+    pages-read: 18
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  - https://community.ataccama.com/master-data-management-reference-data-management-92
+  - https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/api-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/urn-reference.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/folders-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/term-assignments-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/sources-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/stewardship-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/documentation-flow-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/generic-metadata-entities-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/metadata-model-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/run-dq-evaluation-from-pipelines.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/retrieve-dq-results-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+servers:
+- url: https://<keycloak
+security:
+- bearer: []
+tags:
+- name: Rest
+paths:
+  /api/rest/master/{viewname}/{typename}:
+    post:
+      operationId: post_api_rest_master_viewname_typename
+      tags:
+      - Rest
+      summary: How to trigger approval workflow when creating a record via REST API?
+      x-source: https://community.ataccama.com/master-data-management-reference-data-management-92
+      parameters:
+      - name: viewname
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: typename
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,0 +1,523 @@
+openapi: 3.2.0
+info:
+  title: Ataccama Data Quality API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 32 operation(s) read from 18 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Ataccama has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 73
+    documentation: -41
+    pages-with-code: 16
+    pages-read: 18
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  - https://community.ataccama.com/master-data-management-reference-data-management-92
+  - https://docs.ataccama.com/one/latest/one-apis/api-requests-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/api-authentication.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/urn-reference.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/catalog-items-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/folders-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/term-assignments-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/sources-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/stewardship-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/documentation-flow-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/generic-metadata-entities-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/metadata-model-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/run-dq-evaluation-from-pipelines.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/retrieve-dq-results-api.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+  - https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+servers:
+- url: https://<keycloak
+security:
+- bearer: []
+tags:
+- name: Data Quality
+paths:
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors:
+    post:
+      operationId: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors\"  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\"name\": \"Customer Data Monitor\"}' \n The response returns the created monitor, including its URN.\nSave it for the following steps. \n For the full request body options and details, see Create a moni"
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}:
+    patch:
+      operationId: patch_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors_dqmonitorurn
+      tags:
+      - Data Quality
+      summary: PATCH /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitor…
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dqmonitorurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors/{dqMonitorUrn}\"  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"manualRuleInstances\": {\n \"new_email-rule\": {\n \"ruleUrn\": \"urn:ata:{your-tenant}:data-quality:rule:...\",\n \"ruleInstanceName\": \"Email Format Valid\",\n \"enabled\": true,\n \"mappings\":"
+  /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitorurn}/{id}:
+    post:
+      operationId: post_api_data_quality_v1_catalog_items_catalogitemurn_dq_monitors_dqmonitorurn_i
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/catalog-items/{catalogitemurn}/dq-monitors/{dqmonitoru…
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: catalogitemurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dqmonitorurn
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/catalog-items/{catalogItemUrn}/dq-monitors/{dqMonitorUrn}/processings\"  -H \"Authorization: Bearer {access_token}\" \n Response: Links for polling and for the results \n {\n \"polling\": {\n \"href\": \"https://{your-environment}.ataccama.one/api/processing/v1/workflows/urn:ata:{your-tenant}:processing:workflow:...\"\n },\n \"result\": {\n \""
+        collapsed_from: 2 example path(s) differing only at id
+  /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish:
+    post:
+      operationId: post_api_data_quality_v1_dq_dashboards_dqdashboardurn_publish
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/dq-dashboards/{dqdashboardurn}/publish
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: dqdashboardurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dashboards/{dqDashboardUrn}/publish\"  -H \"Authorization: Bearer {access_token}\" \n The API does not return the aggregated quality.\nTo view it, open the dashboard in the web application . \n For details, see Create a dashboard and Publish a dashboard . \n Import rules from an external source \n To migrate rule definitions main"
+  /api/data-quality/v1/results/dq-evaluation/bulk:
+    post:
+      operationId: post_api_data_quality_v1_results_dq_evaluation_bulk
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/results/dq-evaluation/bulk
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/retrieve-dq-results-api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1ResultsDqEvaluationBulkResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/results/dq-evaluation/bulk\"  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"filter\": [\n {\n \"catalogItemUrn\": \"urn:ata:{your-tenant}:catalog:catalog-item:123e4567-...\",\n \"dqMonitorUrn\": \"urn:ata:{your-tenant}:data-quality:dq-monitor:456e4567-...\"\n },\n {\n \"catalogItemUrn\": \"urn:ata:{you"
+  /api/data-quality/v1/rules/{ruleurn}/publish:
+    get:
+      operationId: get_api_data_quality_v1_rules_ruleurn_publish
+      tags:
+      - Data Quality
+      summary: Publish a rule
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_data_quality_v1_rules_ruleurn_publish
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/rules/{ruleurn}/publish
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}/publish\"  -H \"Authorization: Bearer {access_token}\" \n Publishing requires the rule to be complete (including a name , an implementation with conditions, and at least one input group with joined: false ).\nAn incomplete rule fails with a 400 error listing what is missing.\nFor details, see Publish a rule . \n Ste"
+  /api/data-quality/v1/rules/{ruleurn}:
+    delete:
+      operationId: delete_api_data_quality_v1_rules_ruleurn
+      tags:
+      - Data Quality
+      summary: DELETE /api/data-quality/v1/rules/{ruleurn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiDataQualityV1RulesRuleurnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}\"  -H \"Authorization: Bearer {access_token}\" \n A successful request returns 204 No Content . \n Create rules in batch \n Create up to 100 rules in a single request.\nEach item requires name , inputGroups , and implementation .\nStore each sub-entity under a temporary key that you choose, such as new_email (see H"
+    patch:
+      operationId: patch_api_data_quality_v1_rules_ruleurn
+      tags:
+      - Data Quality
+      summary: PATCH /api/data-quality/v1/rules/{ruleurn}
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: ruleurn
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiDataQualityV1RulesRuleurnRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiDataQualityV1RulesRuleurnResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH \"https://{your-environment}.ataccama.one/api/data-quality/v1/rules/{ruleUrn}\"  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"description\": \"Checks that the value is a syntactically valid email address (RFC 5322).\",\n \"inputGroups\": {\n \"{inputGroupId}\": {\n \"inputs\": {\n \"{inputId}\": { \"name\": \"email_address\" },\n \"{obsoleteInputId}\": null,\n \"new_"
+  /api/data-quality/v1/{v1id}:
+    get:
+      operationId: get_api_data_quality_v1_v1id
+      tags:
+      - Data Quality
+      summary: GET /api/data-quality/v1/dq-dimensions
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/manage-dq-rules-via-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dimensions\"  -H \"Authorization: Bearer {access_token}\" \n The endpoint returns published dimensions only, with the same forward-only pagination as List rules . \n In the response, each dimension carries: \n urn : The dimension’s URN, referenced as dqDimensionUrn in rule implementations. \n results : All dimension results of th"
+        collapsed_from: 4 example path(s) differing only at v1Id
+    post:
+      operationId: post_api_data_quality_v1_v1id
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/dq-dashboards
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/set-up-dq-rules-and-monitors-via-api.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiDataQualityV1V1IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{your-environment}.ataccama.one/api/data-quality/v1/dq-dashboards\"  -H \"Authorization: Bearer {access_token}\"  -H \"Content-Type: application/json\"  -d '{\n \"name\": \"Customer Data Dashboard\",\n \"dqMonitorUrns\": [\n \"{dqMonitorUrn}\"\n ]\n }' \n The response returns the created dashboard draft, including its URN.\nSave it for publishing the dashboard. \n Publish the dashboard: \n Request"
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /api/data-quality/v1/{v1id}/batch/create:
+    post:
+      operationId: post_api_data_quality_v1_v1id_batch_create
+      tags:
+      - Data Quality
+      summary: POST /api/data-quality/v1/dq-monitors/batch/create
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/move-dq-rules-and-monitors-between-environments.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiDataQualityV1V1IdBatchCreateResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://{target-environment}.ataccama.one/api/data-quality/v1/dq-monitors/batch/create\"  -H \"Authorization: Bearer {target_access_token}\"  -H \"Content-Type: application/json\"  -d @monitors.json \n Response: 207 Multi-Status, one monitor created and one failed \n {\n \"meta\": { \"total\": 2, \"success\": 1, \"fail\": 1 },\n \"results\": [\n {\n \"status\": \"OK\",\n \"data\": {\n \"urn\": \"urn:ata:{target-ten"
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /data-quality/v1/{v1id}:
+    get:
+      operationId: get_data_quality_v1_v1id
+      tags:
+      - Data Quality
+      summary: List DQ dimensions
+      x-source: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/urn-reference.html
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+components:
+  schemas:
+    PostApiDataQualityV1V1IdBatchCreateResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiDataQualityV1ResultsDqEvaluationBulkRequest:
+      type: object
+      properties:
+        filter:
+          type: array
+          items:
+            type: object
+            properties:
+              catalogItemUrn:
+                type: string
+              dqMonitorUrn:
+                type: string
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo:
+      type: object
+      properties:
+        polling:
+          type: object
+          properties:
+            href:
+              type: string
+        result:
+          type: object
+          properties:
+            href:
+              type: string
+    PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm:
+      type: object
+      properties:
+        manualRuleInstances:
+          type: object
+          properties:
+            new_email-rule:
+              type: object
+              properties:
+                ruleUrn:
+                  type: string
+                ruleInstanceName:
+                  type: string
+                enabled:
+                  type: boolean
+                mappings:
+                  type: object
+                  properties:
+                    new_email-mapping:
+                      type: object
+                      properties:
+                        catalogItemAttributeUrn:
+                          type: string
+                        ruleAttributeUrn:
+                          type: string
+                dqThresholds:
+                  type: object
+                  properties:
+                    new_email-threshold:
+                      type: object
+                      properties:
+                        value:
+                          type: integer
+        overallDqThresholds:
+          type: object
+          properties:
+            new_overall-threshold:
+              type: object
+              properties:
+                value:
+                  type: integer
+    PatchApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        draftType:
+          type: string
+        name:
+          type: string
+        inputGroups:
+          type: object
+        implementation:
+          type: object
+    PostApiDataQualityV1ResultsDqEvaluationBulkResponse:
+      type: object
+      properties:
+        filter:
+          type: array
+          items:
+            type: object
+            properties:
+              catalogItemUrn:
+                type: string
+              dqMonitorUrn:
+                type: string
+    PatchApiDataQualityV1RulesRuleurnRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        inputGroups:
+          type: object
+          properties:
+            '{inputGroupId}':
+              type: object
+              properties:
+                inputs:
+                  type: object
+                  properties:
+                    '{inputId}':
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                    '{obsoleteInputId}':
+                      type:
+                      - string
+                      - 'null'
+                    new_currency:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        dataType:
+                          type: string
+    DeleteApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ:
+      type: object
+      properties:
+        name:
+          type: string
+    PostApiDataQualityV1V1IdRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        dqMonitorUrns:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -105,29 +105,126 @@ common:
     checked: 2026-09-26
 
 apis:
-- aid: ataccama:ataccama-api
-  name: Ataccama API
-  description: 'Ataccama API as documented publicly: 32 operations. Contract generated from the documentation by API Evangelist (2026-09-26);
-    not the provider''s own document.'
+- aid: ataccama:ataccama-ataccama-api-api
+  name: Ataccama Ataccama API
+  description: The Ataccama API API from Ataccama — 1 operation(s) for ataccama api.
   humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
   baseURL: https://<keycloak
+  tags:
+  - Ataccama API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/ataccama-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/ataccama-ataccama-api-api-openapi.yml
   - type: JSONSchema
-    url: json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+    url: >-
+      json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
   - type: JSONSchema
     url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
   - type: JSONSchema
     url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
   - type: JSONSchema
-    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+    url: >-
+      json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
   - type: JSONSchema
     url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
   - type: JSONSchema
     url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
-
+- aid: ataccama:ataccama-catalog-api
+  name: Ataccama Catalog API
+  description: The Catalog API from Ataccama — 13 operation(s) for catalog.
+  humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  baseURL: https://<keycloak
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/ataccama-catalog-api-openapi.yml
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
+- aid: ataccama:ataccama-data-quality-api
+  name: Ataccama Data Quality API
+  description: The Data Quality API from Ataccama — 10 operation(s) for data quality.
+  humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  baseURL: https://<keycloak
+  tags:
+  - Data Quality
+  properties:
+  - type: OpenAPI
+    url: openapi/ataccama-data-quality-api-openapi.yml
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
+- aid: ataccama:ataccama-reference-data-api
+  name: Ataccama Reference Data API
+  description: The Reference Data API from Ataccama — 1 operation(s) for reference data.
+  humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  baseURL: https://<keycloak
+  tags:
+  - Reference Data
+  properties:
+  - type: OpenAPI
+    url: openapi/ataccama-reference-data-api-openapi.yml
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
+- aid: ataccama:ataccama-rest-api
+  name: Ataccama Rest API
+  description: The Rest API from Ataccama — 1 operation(s) for rest.
+  humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
+  baseURL: https://<keycloak
+  tags:
+  - Rest
+  properties:
+  - type: OpenAPI
+    url: openapi/ataccama-rest-api-openapi.yml
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-get-api-catalog-v1-v1-id-urn-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-patch-api-data-quality-v1-rules-ruleurn-request-schema.json
+  - type: JSONSchema
+    url: json-schema/ataccama-post-api-catalog-v1-v1-id-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
