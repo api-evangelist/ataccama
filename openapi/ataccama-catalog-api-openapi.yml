@@ -469,7 +469,7 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteApiCatalogV1V1IdUrnResponse:
+    PostApiCatalogV1EntitiesBatchBatchidResponse:
       type: object
       properties:
         total:
@@ -478,25 +478,96 @@ components:
           type: integer
         fail:
           type: integer
-    PatchApiCatalogV1V1IdUrnRequest:
+    GetApiCatalogV1DocumentationFlowConfigurationsResponse:
       type: object
       properties:
-        description:
-          type: string
-        extraProperties:
+        meta:
           type: object
           properties:
-            isPii:
-              type: boolean
-            sensitivity:
+            next:
               type: string
-    PostApiCatalogV1DocumentationFlowStartRequest:
+            total:
+              type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              urn:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              configuration:
+                type: string
+    PostApiCatalogV1CatalogItemsFilterRequest:
       type: object
       properties:
-        configurationUrn:
+        filter:
+          type: object
+          properties:
+            name:
+              type: object
+              properties:
+                contains:
+                  type: string
+    GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse:
+      type: object
+      properties:
+        name:
           type: string
-        connectionUrn:
+        description:
           type: string
+        nodePaths:
+          type: array
+          items:
+            type: string
+        superEntities:
+          type: array
+          items:
+            type: string
+        subEntities:
+          type: array
+          items: {}
+        properties:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              type:
+                type: string
+              scalarType:
+                type: string
+              editable:
+                type: boolean
+        editable:
+          type: boolean
+    PatchApiCatalogV1V1IdUrnResponse:
+      type: object
+      properties:
+        next:
+          type: string
+        total:
+          type: integer
+    PostApiCatalogV1DocumentationFlowStartResponse:
+      type: object
+      properties:
+        workflowUrn:
+          type: string
+    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
     PostApiCatalogV1StewardshipBatchManageRequest:
       type: object
       properties:
@@ -513,6 +584,99 @@ components:
                 type: string
               previousStewardAccessLevel:
                 type: string
+    PatchApiCatalogV1V1IdUrnRequest:
+      type: object
+      properties:
+        description:
+          type: string
+        extraProperties:
+          type: object
+          properties:
+            isPii:
+              type: boolean
+            sensitivity:
+              type: string
+    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              attributeUrn:
+                type: string
+              termUrns:
+                type: array
+                items:
+                  type: string
+    PostApiCatalogV1V1IdResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        connection:
+          type: object
+          properties:
+            urn:
+              type: string
+        folders:
+          type: array
+          items:
+            type: object
+            properties:
+              urn:
+                type: string
+              name:
+                type: string
+        source:
+          type: object
+          properties:
+            urn:
+              type: string
+    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              attributeUrn:
+                type: string
+              termUrns:
+                type: array
+                items:
+                  type: string
+    PostApiCatalogV1EntitiesBatchBatchidRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              concreteType:
+                type: string
+              parentProperty:
+                type: string
+              properties:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  abbreviation:
+                    type: string
     GetApiCatalogV1MetadataModelEntitiesResponse:
       type: object
       properties:
@@ -560,7 +724,7 @@ components:
                       type: boolean
               editable:
                 type: boolean
-    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRespons:
+    DeleteApiCatalogV1V1IdUrnResponse:
       type: object
       properties:
         total:
@@ -569,29 +733,24 @@ components:
           type: integer
         fail:
           type: integer
-    GetApiCatalogV1V1IdResponse:
+    PostApiCatalogV1StewardshipBatchManageResponse:
       type: object
       properties:
-        next:
-          type: string
         total:
           type: integer
-    PostApiCatalogV1AttributesTermAssignmentsBatchBatchidRequest:
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2:
       type: object
       properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              attributeUrn:
-                type: string
-              termUrns:
-                type: array
-                items:
-                  type: string
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
     PostApiCatalogV1StewardshipManageRequest:
       type: object
       properties:
@@ -600,6 +759,40 @@ components:
         groupUrn:
           type: string
         previousStewardAccessLevel:
+          type: string
+    PostApiCatalogV1StewardshipManageResponse:
+      type: object
+      properties:
+        entityUrn:
+          type: string
+        effectiveStewardship:
+          type: object
+          properties:
+            groupUrn:
+              type: string
+            originUrn:
+              type: string
+    GetApiCatalogV1V1IdResponse:
+      type: object
+      properties:
+        next:
+          type: string
+        total:
+          type: integer
+    PostApiCatalogV1V1IdRequest:
+      type: object
+      properties:
+        type:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        connectionUrn:
+          type: string
+        query:
+          type: string
+        folderUrn:
           type: string
     GetApiCatalogV1V1IdUrnResponse:
       type: object
@@ -644,206 +837,13 @@ components:
               type: boolean
             sensitivity:
               type: string
-    PostApiCatalogV1DocumentationFlowStartResponse:
+    PostApiCatalogV1DocumentationFlowStartRequest:
       type: object
       properties:
-        workflowUrn:
-          type: string
-    PostApiCatalogV1StewardshipManageResponse:
-      type: object
-      properties:
-        entityUrn:
-          type: string
-        effectiveStewardship:
-          type: object
-          properties:
-            groupUrn:
-              type: string
-            originUrn:
-              type: string
-    PostApiCatalogV1CatalogItemsFilterRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-          properties:
-            name:
-              type: object
-              properties:
-                contains:
-                  type: string
-    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              attributeUrn:
-                type: string
-              termUrns:
-                type: array
-                items:
-                  type: string
-    PostApiCatalogV1AttributesTermAssignmentsDenylistBatchBatchi2:
-      type: object
-      properties:
-        total:
-          type: integer
-        success:
-          type: integer
-        fail:
-          type: integer
-    GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
-          type: string
-        nodePaths:
-          type: array
-          items:
-            type: string
-        superEntities:
-          type: array
-          items:
-            type: string
-        subEntities:
-          type: array
-          items: {}
-        properties:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              description:
-                type: string
-              type:
-                type: string
-              scalarType:
-                type: string
-              editable:
-                type: boolean
-        editable:
-          type: boolean
-    PostApiCatalogV1StewardshipBatchManageResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        success:
-          type: integer
-        fail:
-          type: integer
-    PostApiCatalogV1V1IdResponse:
-      type: object
-      properties:
-        urn:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        connection:
-          type: object
-          properties:
-            urn:
-              type: string
-        folders:
-          type: array
-          items:
-            type: object
-            properties:
-              urn:
-                type: string
-              name:
-                type: string
-        source:
-          type: object
-          properties:
-            urn:
-              type: string
-    PostApiCatalogV1V1IdRequest:
-      type: object
-      properties:
-        type:
-          type: string
-        name:
-          type: string
-        description:
+        configurationUrn:
           type: string
         connectionUrn:
           type: string
-        query:
-          type: string
-        folderUrn:
-          type: string
-    PostApiCatalogV1EntitiesBatchBatchidResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        success:
-          type: integer
-        fail:
-          type: integer
-    GetApiCatalogV1DocumentationFlowConfigurationsResponse:
-      type: object
-      properties:
-        meta:
-          type: object
-          properties:
-            next:
-              type: string
-            total:
-              type: integer
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              urn:
-                type: string
-              name:
-                type: string
-              description:
-                type: string
-              configuration:
-                type: string
-    PostApiCatalogV1EntitiesBatchBatchidRequest:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              concreteType:
-                type: string
-              parentProperty:
-                type: string
-              properties:
-                type: object
-                properties:
-                  name:
-                    type: string
-                  abbreviation:
-                    type: string
-    PatchApiCatalogV1V1IdUrnResponse:
-      type: object
-      properties:
-        next:
-          type: string
-        total:
-          type: integer
   securitySchemes:
     bearer:
       type: http

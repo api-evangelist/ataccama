@@ -49,7 +49,13 @@
     "ataccama-openapi-generated.yml: declared missing tag: Ataccama API",
     "ataccama-openapi-generated.yml: declared missing tag: Reference Data",
     "ataccama-openapi-generated.yml: declared missing tag: Rest",
-    "apis.yml register: written (+5 apis, 5 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "ataccama-ataccama-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ataccama-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ataccama-data-quality-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ataccama-reference-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ataccama-rest-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
