@@ -28,6 +28,13 @@ tags:
 - Company
 - Data Quality
 - Data Governance
+- Artificial Intelligence
+- Enterprise
+- Platform
+tags_raw:
+- Company
+- Data Quality
+- Data Governance
 - AI
 - Enterprise
 - Platform
@@ -207,6 +214,8 @@ apis:
   humanURL: https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html
   baseURL: https://<keycloak
   tags:
+  - REST
+  tags_raw:
   - Rest
   properties:
   - type: OpenAPI
