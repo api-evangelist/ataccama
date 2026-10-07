@@ -46,6 +46,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Plans
+  url: plans/ataccama-plans-pricing.yml
 - type: TermsOfService
   url: https://community.ataccama.com/site/terms
 - type: Support
