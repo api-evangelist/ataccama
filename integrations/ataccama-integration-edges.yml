@@ -11,8 +11,8 @@ edges:
   type: marketplace
   marketplace: aws-marketplace
   channel: distribution
-  relationship: platform-app
-  direction: provider-built
+  relationship: distribution-channel
+  direction: third-party
   evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-qexthzyjwp6lk
   listing_count: 1
   apps:
@@ -26,8 +26,8 @@ edges:
   type: marketplace
   marketplace: aws-marketplace
   channel: distribution
-  relationship: platform-app
-  direction: provider-built
+  relationship: distribution-channel
+  direction: third-party
   evidence: https://aws.amazon.com/marketplace/seller-profile?id=69aef8d8-3b79-41b3-a3c2-fb55f561c900
   listing_count: 1
   apps:
@@ -41,8 +41,8 @@ edges:
   type: marketplace
   marketplace: azure-marketplace
   channel: distribution
-  relationship: platform-app
-  direction: provider-built
+  relationship: distribution-channel
+  direction: third-party
   evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Ataccama%20Corporation
   listing_count: 1
   apps:
