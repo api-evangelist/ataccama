@@ -2,7 +2,7 @@
   "repo": "ataccama",
   "feeds": [
     {
-      "source": "https://www.ataccama.com/",
+      "source": "https://www.ataccama.com/resources?search=&cat%5B%5D=66",
       "feed_url": "https://www.ataccama.com/feed",
       "title": "",
       "saved": 0,
@@ -16,6 +16,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-10-03T12:30:02Z"
+  "post_count": 11,
+  "fetched": "2026-10-10T13:15:00Z"
 }
