@@ -364,40 +364,15 @@ paths:
         collapsed_from: 2 example path(s) differing only at v1Id
 components:
   schemas:
-    DeleteApiDataQualityV1RulesRuleurnResponse:
+    PostApiDataQualityV1V1IdRequest:
       type: object
       properties:
-        total:
-          type: integer
-        success:
-          type: integer
-        fail:
-          type: integer
-    PostApiDataQualityV1ResultsDqEvaluationBulkResponse:
-      type: object
-      properties:
-        filter:
+        name:
+          type: string
+        dqMonitorUrns:
           type: array
           items:
-            type: object
-            properties:
-              catalogItemUrn:
-                type: string
-              dqMonitorUrn:
-                type: string
-    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo:
-      type: object
-      properties:
-        polling:
-          type: object
-          properties:
-            href:
-              type: string
-        result:
-          type: object
-          properties:
-            href:
-              type: string
+            type: string
     PatchApiDataQualityV1RulesRuleurnRequest:
       type: object
       properties:
@@ -428,20 +403,20 @@ components:
                           type: string
                         dataType:
                           type: string
-    PatchApiDataQualityV1RulesRuleurnResponse:
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqmo:
       type: object
       properties:
-        urn:
-          type: string
-        draftType:
-          type: string
-        name:
-          type: string
-        inputGroups:
+        polling:
           type: object
-        implementation:
+          properties:
+            href:
+              type: string
+        result:
           type: object
-    PostApiDataQualityV1ResultsDqEvaluationBulkRequest:
+          properties:
+            href:
+              type: string
+    PostApiDataQualityV1ResultsDqEvaluationBulkResponse:
       type: object
       properties:
         filter:
@@ -453,11 +428,6 @@ components:
                 type: string
               dqMonitorUrn:
                 type: string
-    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ:
-      type: object
-      properties:
-        name:
-          type: string
     PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm:
       type: object
       properties:
@@ -499,6 +469,31 @@ components:
               properties:
                 value:
                   type: integer
+    PatchApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        urn:
+          type: string
+        draftType:
+          type: string
+        name:
+          type: string
+        inputGroups:
+          type: object
+        implementation:
+          type: object
+    PostApiDataQualityV1ResultsDqEvaluationBulkRequest:
+      type: object
+      properties:
+        filter:
+          type: array
+          items:
+            type: object
+            properties:
+              catalogItemUrn:
+                type: string
+              dqMonitorUrn:
+                type: string
     PostApiDataQualityV1V1IdBatchCreateResponse:
       type: object
       properties:
@@ -508,15 +503,20 @@ components:
           type: integer
         fail:
           type: integer
-    PostApiDataQualityV1V1IdRequest:
+    DeleteApiDataQualityV1RulesRuleurnResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        success:
+          type: integer
+        fail:
+          type: integer
+    PostApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsRequ:
       type: object
       properties:
         name:
           type: string
-        dqMonitorUrns:
-          type: array
-          items:
-            type: string
   securitySchemes:
     bearer:
       type: http
