@@ -64,5 +64,137 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ataccama is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/ataccama_stock/
+Ataccama provides an agentic data trust platform that combines data quality, observability, lineage, governance and master data management. Their solutions help enterprises accelerate business initiatives with trusted, high‑quality data, supporting AI, analytics and compliance across industries such as finance, insurance and manufacturing. The platform includes modules for data quality, catalog, lineage, reference data, and data observability, delivering a unified data trust foundation.
+
+**Areas:** Company · Data Quality · Data Governance · Artificial Intelligence · Enterprise · Platform
+
+## Ataccama on APIs.io
+
+Everything profiled for Ataccama is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ataccama/](https://apis.io/providers/ataccama/)** — or go straight to one of the APIs or properties below.
+
+### APIs (5)
+
+- [Ataccama Ataccama API](https://apis.io/apis/ataccama/ataccama-ataccama-api-api/) — The Ataccama API API from Ataccama — 1 operation(s) for ataccama api.
+- [Ataccama Catalog API](https://apis.io/apis/ataccama/ataccama-catalog-api/) — The Catalog API from Ataccama — 13 operation(s) for catalog.
+- [Ataccama Data Quality API](https://apis.io/apis/ataccama/ataccama-data-quality-api/) — The Data Quality API from Ataccama — 10 operation(s) for data quality.
+- [Ataccama Reference Data API](https://apis.io/apis/ataccama/ataccama-reference-data-api/) — The Reference Data API from Ataccama — 1 operation(s) for reference data.
+- [Ataccama Rest API](https://apis.io/apis/ataccama/ataccama-rest-api/) — The Rest API from Ataccama — 1 operation(s) for rest.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [ataccama-mcp.yml](https://apis.io/servers/ataccama/ataccama-mcp-yml/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetApiCatalogV1MetadataModelEntitiesBusinesstermResponse](https://apis.io/schemas/ataccama/ataccama-get-api-catalog-v1-metadata-model-entities-businessterm-response/)
+- [GetApiCatalogV1MetadataModelEntitiesResponse](https://apis.io/schemas/ataccama/ataccama-get-api-catalog-v1-metadata-model-entities-response/)
+- [GetApiCatalogV1V1IdUrnResponse](https://apis.io/schemas/ataccama/ataccama-get-api-catalog-v1-v1-id-urn-response/)
+- [PatchApiDataQualityV1CatalogItemsCatalogitemurnDqMonitorsDqm](https://apis.io/schemas/ataccama/ataccama-patch-api-data-quality-v1-catalog-items-catalogitemurn-dq-monitors-dqm/)
+- [PatchApiDataQualityV1RulesRuleurnRequest](https://apis.io/schemas/ataccama/ataccama-patch-api-data-quality-v1-rules-ruleurn-request/)
+- [PostApiCatalogV1V1IdResponse](https://apis.io/schemas/ataccama/ataccama-post-api-catalog-v1-v1-id-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Ataccama Context](https://apis.io/jsonld/ataccama/ataccama-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Ataccama API Rules](https://apis.io/rules/ataccama/ataccama-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ataccama Authentication](https://apis.io/security/ataccama/ataccama-authentication/)
+- [Ataccama Domain Security](https://apis.io/security/ataccama/ataccama-domain-security/)
+- [Ataccama Vulnerability Disclosure](https://apis.io/security/ataccama/ataccama-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Ataccama Plans Pricing](https://apis.io/plans/ataccama/ataccama-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.ataccama.com/)
+- [Documentation](https://docs.ataccama.com/)
+- [Getting started](https://docs.ataccama.com/one/latest/getting-started/get-started-with-data-quality.html)
+- [API reference](https://docs.ataccama.com/ataccama-one-agentic/latest/rest-api/rest-api-overview.html)
+- [Pricing](https://www.ataccama.com/pricing)
+- [Sign up](https://www.ataccama.com/contact/sign-up-for-newsletter)
+- [Support](https://support.ataccama.com)
+- [Changelog](https://docs.ataccama.com/one/latest/release-notes/ataccama-17.0.0-release-notes.html)
+- [Blog](https://www.ataccama.com/resources?search=&cat%5B%5D=66)
+- [Trust centre](https://www.ataccama.com/trust-center)
+- [Terms of service](https://community.ataccama.com/site/terms)
+- [Privacy policy](https://www.ataccama.com/legal/privacy-notice)
+
+## API Evangelist rating
+
+**Kin Score 48.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.4 |
+| Contract quality | 25.2 |
+| Contract governance | 35.6 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 73.7 |
+
+**Agent readiness 34.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ataccama/](https://apis.io/providers/ataccama/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ataccama: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ataccama/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
